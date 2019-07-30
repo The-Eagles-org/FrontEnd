@@ -1,0 +1,21 @@
+.register-container {
+    text-align: center;
+}
+.register-text {
+    font-size: 50px;
+}
+.input {
+    padding: 10px 60px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.register-button {
+    padding: 10px 50px;
+    background-color: #fdd041;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.register-button:hover {
+    background-color: wheat; 
+}
