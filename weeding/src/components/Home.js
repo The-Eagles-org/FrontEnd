@@ -1,10 +1,12 @@
 import React from "react";
 import "./index.css";
 
+import Login from "./Login";
+
 export const Home = () => {
-    return (
-        <div className="home-container">
-            <h3>plan your wedding perfectly</h3>
-        </div>
-    );
-}
+  return (
+    <div className="home-container">
+      <Login />
+    </div>
+  );
+};

@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { register } from "../actions";
 //css
 import "./index.css";
-
 class Register extends React.Component {
   constructor() {
     super();
@@ -23,7 +22,9 @@ class Register extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.register(this.state);
+    this.props.register(this.state).then(() => {
+      this.props.history.push("/");
+    });
   };
   render() {
     return (
