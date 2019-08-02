@@ -3,18 +3,18 @@ import { NavLink } from "react-router-dom";
 
 import { connect } from "react-redux";
 import { login } from "../actions";
-// import { Loader } from "react-loader-spinner";
 
 class Login extends React.Component {
   state = {
-    email: "",
+    username: "",
     password: ""
   };
   handleChanges = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ ...this.state, [e.target.name]: e.target.value });
   };
   handleSubmit = e => {
     e.preventDefault();
+    console.log(this.state);
     this.props.login(this.state);
   };
   render() {
@@ -24,10 +24,10 @@ class Login extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChanges}
-            value={this.state.email}
-            placeholder="Email..."
-            type="email"
-            name="email"
+            value={this.state.username}
+            placeholder="Username..."
+            type="username"
+            name="username"
             className="input"
           />
           <br />
@@ -40,13 +40,6 @@ class Login extends React.Component {
             className="input"
           />
           <br />
-          {/* <button className="login-button">
-            {this.props.isLoading ? (
-              <Loader type="ThreeDots" color="#6b6b6b" height="12" width="26" />
-            ) : (
-              "Sign In"
-            )}
-          </button> */}
           <button className="login-button">Sign In</button>
         </form>
         <p>Don't Have An Account?</p>

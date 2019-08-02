@@ -8,14 +8,14 @@ export const LOGIN_START = "LOGIN_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 //actions
-export const register = creds => dispatch => {
+export const register = credentials => dispatch => {
   dispatch({ type: REGISTER_START });
   return (
     axios
       //Endpoint
       .post(
         "https://lambda-wedding-planner.herokuapp.com/api/auth/register",
-        creds
+        credentials
       )
       .then(res => {
         console.log(res);
@@ -32,11 +32,14 @@ export const register = creds => dispatch => {
   );
 };
 
-export const login = creds => dispatch => {
+export const login = credentials => dispatch => {
   dispatch({ type: LOGIN_START });
   axios
     //Endpoint
-    .post("https://lambda-wedding-planner.herokuapp.com/api/auth/login", creds)
+    .post(
+      "https://lambda-wedding-planner.herokuapp.com/api/auth/login",
+      credentials
+    )
     .then(res => {
       console.log(res);
       localStorage.setItem("token", res.data.token);
