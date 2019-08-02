@@ -1,0 +1,40 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #98bfe8;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+}
+.nav-bar {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-between;
+}
+.navigation {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.nav-tags {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.nav-tags1 {
+  border-bottom: 3px solid #fdd041;
+}
+.nav-tags1:hover {
+  font-size: 23px;
+}
+.nav-tags2:hover {
+  border-bottom: 3px solid #fdd041;
+  font-size: 23px;
+}
+.planner {
+  color: whitesmoke;
+}
+.title {
+  font-family: "Source Code Pro", monospace;
+}
